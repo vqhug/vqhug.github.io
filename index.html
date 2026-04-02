@@ -4,27 +4,44 @@
     <meta charset="UTF-8">
     <title>Delta APK</title>
     <style>
+        body {
+            background-color: #1e1e2f; /* nền web - m thay đổi màu tùy ý */
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 60px;            /* chữ tiêu đề */
+            color: #ffdd57;             /* chữ tiêu đề - m thay đổi màu */
+            margin-bottom: 50px;
+        }
+
         .download-btn {
             display: inline-block;
-            padding: 15px 30px;       /* độ rộng/chiều cao nút */
-            background-color: #4CAF50; /* màu nền nút */
-            color: white;             /* màu chữ */
-            font-size: 24px;          /* chữ to */
-            text-decoration: none;    /* bỏ gạch chân */
-            border-radius: 10px;      /* bo góc */
-            transition: background 0.3s; /* hiệu ứng hover */
+            padding: 30px 60px;          /* kích thước nút */
+            background-color: #ff6f61;   /* màu nền nút - m thay đổi */
+            color: #ffffff;              /* chữ nút - m thay đổi */
+            font-size: 36px;             /* chữ nút */
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 15px;         /* bo góc nút */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* bóng nút */
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
         }
 
         .download-btn:hover {
-            background-color: #45a049; /* đổi màu khi hover */
+            transform: translateY(-5px);           /* nhấc nút lên khi hover */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            background-color: #ff856f;             /* đổi màu khi hover */
         }
     </style>
 </head>
-<body style="text-align:center; margin-top:50px;">
+<body>
 
-    <h1 style="font-size:60px;">Scrip and clien by Quang Hieu</h1>
+    <h1>Scrip and clien by Quang Hieu</h1>
 
-    <!-- Nút tải Delta APK -->
     <a href="https://www.mediafire.com/file/5bqkohstfkajw91/delta-2711871-vn.apk/file" 
        class="download-btn" target="_blank" rel="noopener noreferrer">
         📥 Tải Delta APK
