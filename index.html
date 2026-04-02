@@ -13,7 +13,7 @@ body{
     display:flex;
     flex-direction:column;
     align-items:center;
-    padding:40px 20px;
+    padding:40px 10px;
     color:white;
 }
 
@@ -23,42 +23,70 @@ h1{
 
 /* ô link */
 .link-box{
-    width:90%;
-    max-width:420px;
-    padding:18px;
-    margin:12px 0;
+    width:95%;
+    max-width:600px;
+    padding:22px;
+    margin:14px 0;
 
     background: rgba(255,255,255,0.08);
     backdrop-filter: blur(10px);
 
-    border-radius:16px;
-
-    /* glow sáng */
-    box-shadow:
-    0 0 15px rgba(255,255,255,0.15),
-    0 0 30px rgba(79,172,254,0.25);
+    border-radius:18px;
 
     text-decoration:none;
     color:white;
 
+    position:relative;
+    overflow:hidden;
+
     transition:0.25s;
+
+    box-shadow:0 0 15px rgba(255,255,255,0.1);
 }
 
-.link-box:hover{
-    transform:scale(1.04);
+/* ánh sáng chạy */
+.link-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60%;
+    height:100%;
 
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+
+    transform:skewX(-20deg);
+}
+
+/* hover */
+.link-box:hover{
+    transform:scale(1.03);
     box-shadow:
-    0 0 25px rgba(255,255,255,0.35),
-    0 0 50px rgba(79,172,254,0.45);
+    0 0 20px rgba(255,255,255,0.3),
+    0 0 40px rgba(0,200,255,0.4);
+}
+
+.link-box:hover::before{
+    animation:shine 1s;
+}
+
+@keyframes shine{
+    0%{ left:-120%; }
+    100%{ left:120%; }
 }
 
 .title{
-    font-size:18px;
+    font-size:20px;
     font-weight:bold;
 }
 
 .desc{
-    font-size:14px;
+    font-size:15px;
     opacity:0.8;
 }
 
@@ -70,17 +98,17 @@ h1{
 <h1>Script and Client by Quang Hieu</h1>
 
 <a class="link-box" href="https://www.mediafire.com/file/5bqkohstfkajw91/delta-2711871-vn.apk/file">
-<div class="title">Delta APK</div>
+<div class="title">📥 Delta APK</div>
 <div class="desc">Download Delta Client</div>
 </a>
 
 <a class="link-box" href="#">
-<div class="title">Script Hub</div>
+<div class="title">⚡ Script Hub</div>
 <div class="desc">Load Script Roblox</div>
 </a>
 
 <a class="link-box" href="#">
-<div class="title">Discord</div>
+<div class="title">💬 Discord</div>
 <div class="desc">Join Community</div>
 </a>
 
