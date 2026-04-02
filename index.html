@@ -11,13 +11,13 @@ body{
     padding:50px;
     text-align:center;
     font-family: Arial, sans-serif;
-    color:#333;
+    color:white;
 
-    /* nền xanh nhạt trắng */
-    background: linear-gradient(135deg,#e0f7ff,#ffffff);
+    /* nền tối đẹp hơn */
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 }
 
-/* lớp nền particles */
+/* particles nền */
 #particles-js{
     position:fixed;
     width:100%;
@@ -29,27 +29,27 @@ body{
 
 h1{
     font-size:60px;
-    color:#2c3e50;
     margin-bottom:50px;
+    color:#ffffff;
+    text-shadow:0 0 15px rgba(255,255,255,0.6);
 }
 
 .download-btn{
     display:inline-block;
     padding:30px 60px;
-    background:#4da6ff;
+    background:linear-gradient(45deg,#4facfe,#00f2fe);
     color:white;
     font-size:36px;
     font-weight:bold;
     text-decoration:none;
     border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
     transition:0.3s;
 }
 
 .download-btn:hover{
-    transform:translateY(-5px) scale(1.05);
-    box-shadow:0 15px 35px rgba(0,0,0,0.3);
-    background:#3399ff;
+    transform:translateY(-6px) scale(1.05);
+    box-shadow:0 15px 35px rgba(0,0,0,0.5);
 }
 
 </style>
@@ -72,12 +72,16 @@ target="_blank">
 <script>
 particlesJS("particles-js",{
   particles:{
-    number:{value:60},
-    size:{value:4},
-    color:{value:"#ffffff"},
-    move:{speed:1.5},
-    opacity:{value:0.7},
-    line_linked:{enable:false}
+    number:{value:120},   // nhiều hạt hơn
+    size:{value:4},       // hạt to hơn
+    move:{speed:2},       // bay nhanh hơn
+    opacity:{value:0.8},
+    line_linked:{
+        enable:true,
+        distance:150,
+        color:"#ffffff",
+        opacity:0.5
+    }
   }
 });
 </script>
