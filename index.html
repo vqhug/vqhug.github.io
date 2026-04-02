@@ -2,44 +2,64 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Delta APK</title>
+<title>Quang Hieu</title>
 
 <style>
 
 body{
     margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    font-family: Arial, sans-serif;
+    font-family:Arial, sans-serif;
     background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:40px 20px;
     color:white;
 }
 
 h1{
-    font-size:42px;
-    margin-bottom:40px;
+    margin-bottom:30px;
 }
 
-.download-btn{
-    display:inline-block;
-    padding:25px 55px;
-    background:#4facfe;
-    color:white;
-    font-size:28px;
-    font-weight:bold;
+/* ô link */
+.link-box{
+    width:90%;
+    max-width:420px;
+    padding:18px;
+    margin:12px 0;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+
+    border-radius:16px;
+
+    /* glow sáng */
+    box-shadow:
+    0 0 15px rgba(255,255,255,0.15),
+    0 0 30px rgba(79,172,254,0.25);
+
     text-decoration:none;
-    border-radius:14px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    color:white;
+
     transition:0.25s;
 }
 
-.download-btn:hover{
-    transform:scale(1.06);
-    background:#3a9cff;
+.link-box:hover{
+    transform:scale(1.04);
+
+    box-shadow:
+    0 0 25px rgba(255,255,255,0.35),
+    0 0 50px rgba(79,172,254,0.45);
+}
+
+.title{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.desc{
+    font-size:14px;
+    opacity:0.8;
 }
 
 </style>
@@ -49,10 +69,19 @@ h1{
 
 <h1>Script and Client by Quang Hieu</h1>
 
-<a href="https://www.mediafire.com/file/5bqkohstfkajw91/delta-2711871-vn.apk/file"
-class="download-btn"
-target="_blank">
-📥 Download Delta APK
+<a class="link-box" href="https://www.mediafire.com/file/5bqkohstfkajw91/delta-2711871-vn.apk/file">
+<div class="title">Delta APK</div>
+<div class="desc">Download Delta Client</div>
+</a>
+
+<a class="link-box" href="#">
+<div class="title">Script Hub</div>
+<div class="desc">Load Script Roblox</div>
+</a>
+
+<a class="link-box" href="#">
+<div class="title">Discord</div>
+<div class="desc">Join Community</div>
 </a>
 
 </body>
