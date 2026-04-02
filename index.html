@@ -1,51 +1,80 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Delta APK</title>
-    <style>
-        body {
-            background-color: #1e1e2f; /* nền web - m thay đổi màu tùy ý */
-            text-align: center;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 50px;
-        }
+<meta charset="UTF-8">
+<title>Delta APK</title>
 
-        h1 {
-            font-size: 60px;            /* chữ tiêu đề */
-            color: #ffdd57;             /* chữ tiêu đề - m thay đổi màu */
-            margin-bottom: 50px;
-        }
+<style>
+body {
+    background-color: #1e1e2f;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 50px;
+    color: white;
+}
 
-        .download-btn {
-            display: inline-block;
-            padding: 30px 60px;          /* kích thước nút */
-            background-color: #ff6f61;   /* màu nền nút - m thay đổi */
-            color: #ffffff;              /* chữ nút - m thay đổi */
-            font-size: 36px;             /* chữ nút */
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 15px;         /* bo góc nút */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* bóng nút */
-            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
-        }
+/* nền particles */
+#particles-js{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index:-1;
+}
 
-        .download-btn:hover {
-            transform: translateY(-5px);           /* nhấc nút lên khi hover */
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-            background-color: #ff856f;             /* đổi màu khi hover */
-        }
-    </style>
+h1 {
+    font-size: 60px;
+    color: #ffdd57;
+    margin-bottom: 50px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 30px 60px;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.download-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    background-color: #ff856f;
+}
+</style>
 </head>
+
 <body>
 
-    <h1>Scrip and clien by Quang Hieu</h1>
+<div id="particles-js"></div>
 
-    <a href="https://www.mediafire.com/file/5bqkohstfkajw91/delta-2711871-vn.apk/file" 
-       class="download-btn" target="_blank" rel="noopener noreferrer">
-        📥 Tải Delta APK
-    </a>
+<h1>Scrip and clien by Quang Hieu</h1>
+
+<a href="https://www.mediafire.com/file/5bqkohstfkajw91/delta-2711871-vn.apk/file"
+class="download-btn"
+target="_blank">
+📥 Tải Delta APK
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+particlesJS("particles-js",{
+  particles:{
+    number:{value:80},
+    size:{value:3},
+    move:{speed:2},
+    line_linked:{enable:true}
+  }
+});
+</script>
 
 </body>
 </html>
