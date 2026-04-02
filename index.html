@@ -15,65 +15,31 @@ body{
     flex-direction:column;
     text-align:center;
     font-family: Arial, sans-serif;
-    color:white;
     background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-}
-
-/* particles nền */
-#particles-js{
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
-    z-index:-1;
-}
-
-/* hiệu ứng spark khi chạm */
-.spark{
-    position:fixed;
-    width:8px;
-    height:8px;
-    background:white;
-    border-radius:50%;
-    pointer-events:none;
-    box-shadow:0 0 10px white,0 0 20px white;
-    animation:sparkle 0.5s ease-out forwards;
-}
-
-@keyframes sparkle{
-    from{
-        transform:scale(1);
-        opacity:1;
-    }
-    to{
-        transform:scale(3);
-        opacity:0;
-    }
+    color:white;
 }
 
 h1{
     font-size:42px;
     margin-bottom:40px;
-    text-shadow:0 0 15px rgba(255,255,255,0.7);
 }
 
 .download-btn{
     display:inline-block;
-    padding:25px 50px;
-    background:linear-gradient(45deg,#4facfe,#00f2fe);
+    padding:25px 55px;
+    background:#4facfe;
     color:white;
     font-size:28px;
     font-weight:bold;
     text-decoration:none;
-    border-radius:15px;
-    box-shadow:0 0 25px rgba(79,172,254,0.9);
-    transition:0.3s;
+    border-radius:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    transition:0.25s;
 }
 
 .download-btn:hover{
-    transform:scale(1.08);
-    box-shadow:0 0 40px rgba(79,172,254,1);
+    transform:scale(1.06);
+    background:#3a9cff;
 }
 
 </style>
@@ -81,67 +47,13 @@ h1{
 
 <body>
 
-<div id="particles-js"></div>
-
 <h1>Script and Client by Quang Hieu</h1>
 
 <a href="https://www.mediafire.com/file/5bqkohstfkajw91/delta-2711871-vn.apk/file"
 class="download-btn"
 target="_blank">
-🚀 Download Delta APK
+📥 Download Delta APK
 </a>
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-
-<script>
-particlesJS("particles-js",{
-  particles:{
-    number:{value:100},
-    size:{value:4},
-    move:{speed:2},
-    opacity:{value:0.8},
-    line_linked:{
-        enable:true,
-        distance:150,
-        color:"#ffffff",
-        opacity:0.5
-    }
-  },
-
-  interactivity:{
-    detect_on:"window",
-    events:{
-      onhover:{enable:true,mode:"repulse"},
-      onclick:{enable:true,mode:"push"},
-      resize:true
-    },
-
-    modes:{
-      repulse:{distance:120},
-      push:{particles_nb:10}
-    }
-  },
-
-  retina_detect:true
-});
-
-/* hiệu ứng click phát sáng nhỏ */
-document.addEventListener("click",function(e){
-
-  let s=document.createElement("div");
-  s.className="spark";
-
-  s.style.left=e.clientX+"px";
-  s.style.top=e.clientY+"px";
-
-  document.body.appendChild(s);
-
-  setTimeout(()=>{
-    s.remove();
-  },500);
-
-});
-</script>
 
 </body>
 </html>
