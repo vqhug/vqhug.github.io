@@ -19,7 +19,7 @@ body{
     background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 }
 
-/* particles */
+/* particles nền */
 #particles-js{
     position:fixed;
     width:100%;
@@ -29,24 +29,25 @@ body{
     z-index:-1;
 }
 
-/* hiệu ứng vòng sáng khi chạm */
-.touch-effect{
+/* hiệu ứng spark khi chạm */
+.spark{
     position:fixed;
+    width:8px;
+    height:8px;
+    background:white;
     border-radius:50%;
     pointer-events:none;
-    border:2px solid white;
-    width:20px;
-    height:20px;
-    animation:touch 0.6s ease-out forwards;
+    box-shadow:0 0 10px white,0 0 20px white;
+    animation:sparkle 0.5s ease-out forwards;
 }
 
-@keyframes touch{
+@keyframes sparkle{
     from{
         transform:scale(1);
         opacity:1;
     }
     to{
-        transform:scale(8);
+        transform:scale(3);
         opacity:0;
     }
 }
@@ -117,27 +118,27 @@ particlesJS("particles-js",{
 
     modes:{
       repulse:{distance:120},
-      push:{particles_nb:15}
+      push:{particles_nb:10}
     }
   },
 
   retina_detect:true
 });
 
-/* hiệu ứng chạm */
+/* hiệu ứng click phát sáng nhỏ */
 document.addEventListener("click",function(e){
 
-  let effect=document.createElement("div");
-  effect.className="touch-effect";
+  let s=document.createElement("div");
+  s.className="spark";
 
-  effect.style.left=e.clientX+"px";
-  effect.style.top=e.clientY+"px";
+  s.style.left=e.clientX+"px";
+  s.style.top=e.clientY+"px";
 
-  document.body.appendChild(effect);
+  document.body.appendChild(s);
 
   setTimeout(()=>{
-    effect.remove();
-  },600);
+    s.remove();
+  },500);
 
 });
 </script>
