@@ -29,6 +29,28 @@ body{
     z-index:-1;
 }
 
+/* hiệu ứng vòng sáng khi chạm */
+.touch-effect{
+    position:fixed;
+    border-radius:50%;
+    pointer-events:none;
+    border:2px solid white;
+    width:20px;
+    height:20px;
+    animation:touch 0.6s ease-out forwards;
+}
+
+@keyframes touch{
+    from{
+        transform:scale(1);
+        opacity:1;
+    }
+    to{
+        transform:scale(8);
+        opacity:0;
+    }
+}
+
 h1{
     font-size:42px;
     margin-bottom:40px;
@@ -84,12 +106,39 @@ particlesJS("particles-js",{
         opacity:0.5
     }
   },
+
   interactivity:{
+    detect_on:"window",
     events:{
       onhover:{enable:true,mode:"repulse"},
-      onclick:{enable:true,mode:"push"}
+      onclick:{enable:true,mode:"push"},
+      resize:true
+    },
+
+    modes:{
+      repulse:{distance:120},
+      push:{particles_nb:15}
     }
-  }
+  },
+
+  retina_detect:true
+});
+
+/* hiệu ứng chạm */
+document.addEventListener("click",function(e){
+
+  let effect=document.createElement("div");
+  effect.className="touch-effect";
+
+  effect.style.left=e.clientX+"px";
+  effect.style.top=e.clientY+"px";
+
+  document.body.appendChild(effect);
+
+  setTimeout(()=>{
+    effect.remove();
+  },600);
+
 });
 </script>
 
