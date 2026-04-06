@@ -15,7 +15,6 @@ flex-direction:column;
 align-items:center;
 min-height:100vh;
 
-/* nền tối động */
 background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#1f2937);
 background-size:400% 400%;
 animation:gradient 15s ease infinite;
@@ -44,46 +43,66 @@ flex-direction:column;
 gap:25px;
 }
 
-/* ô kính trong suốt + chiều sâu */
+/* ô kiểu nước */
 .box{
+position:relative;
 padding:26px;
 text-align:center;
 font-size:20px;
 font-weight:600;
 color:white;
-border-radius:16px;
+border-radius:18px;
 text-decoration:none;
 
-/* kính trong suốt */
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);
+/* kính nước */
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
 
-/* viền sáng nhẹ */
-border:1px solid rgba(255,255,255,0.2);
+/* viền nước */
+border:1px solid rgba(255,255,255,0.25);
 
 /* bóng chiều sâu */
 box-shadow:
-0 12px 30px rgba(0,0,0,0.45),
-inset 0 1px 0 rgba(255,255,255,0.2);
+0 10px 25px rgba(0,0,0,0.45),
+inset 0 1px 2px rgba(255,255,255,0.35);
 
 transition:all 0.25s ease;
+overflow:hidden;
 }
 
-/* hover nổi lên */
+/* ánh sáng phản chiếu */
+.box::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:60%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.5),
+transparent
+);
+transition:0.6s;
+}
+
+.box:hover::before{
+left:120%;
+}
+
+/* hover nổi */
 .box:hover{
 transform:translateY(-6px);
-background:rgba(255,255,255,0.12);
 box-shadow:
 0 18px 40px rgba(0,0,0,0.6),
-inset 0 1px 0 rgba(255,255,255,0.3);
+inset 0 1px 3px rgba(255,255,255,0.4);
 }
 
 /* bấm lún */
 .box:active{
 transform:translateY(3px) scale(0.98);
-box-shadow:
-0 8px 20px rgba(0,0,0,0.5) inset;
 }
 
 </style>
