@@ -15,9 +15,10 @@ flex-direction:column;
 align-items:center;
 min-height:100vh;
 
-background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#1f2937);
+/* nền động */
+background:linear-gradient(-45deg,#e3f2fd,#f5f7ff,#e0f7fa,#f3e5f5);
 background-size:400% 400%;
-animation:gradient 15s ease infinite;
+animation:gradient 12s ease infinite;
 }
 
 @keyframes gradient{
@@ -29,7 +30,7 @@ animation:gradient 15s ease infinite;
 .title{
 font-size:32px;
 font-weight:bold;
-color:white;
+color:#333;
 margin-top:60px;
 text-align:center;
 }
@@ -43,66 +44,43 @@ flex-direction:column;
 gap:25px;
 }
 
-/* ô kiểu nước */
+/* ô 3D rõ khối */
 .box{
-position:relative;
 padding:26px;
 text-align:center;
 font-size:20px;
 font-weight:600;
-color:white;
-border-radius:18px;
+color:#222;
+border-radius:14px;
 text-decoration:none;
 
-/* kính nước */
-background:rgba(255,255,255,0.12);
-backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
+background:white;
 
-/* viền nước */
-border:1px solid rgba(255,255,255,0.25);
+/* viền nhẹ */
+border:1px solid rgba(0,0,0,0.08);
 
-/* bóng chiều sâu */
+/* bóng tạo chiều sâu */
 box-shadow:
-0 10px 25px rgba(0,0,0,0.45),
-inset 0 1px 2px rgba(255,255,255,0.35);
+0 8px 0 rgba(0,0,0,0.12),
+0 18px 30px rgba(0,0,0,0.12);
 
-transition:all 0.25s ease;
-overflow:hidden;
+transition:all 0.2s ease;
 }
 
-/* ánh sáng phản chiếu */
-.box::before{
-content:"";
-position:absolute;
-top:0;
-left:-100%;
-width:60%;
-height:100%;
-background:linear-gradient(
-120deg,
-transparent,
-rgba(255,255,255,0.5),
-transparent
-);
-transition:0.6s;
-}
-
-.box:hover::before{
-left:120%;
-}
-
-/* hover nổi */
+/* hover nâng lên */
 .box:hover{
-transform:translateY(-6px);
+transform:translateY(-4px);
 box-shadow:
-0 18px 40px rgba(0,0,0,0.6),
-inset 0 1px 3px rgba(255,255,255,0.4);
+0 12px 0 rgba(0,0,0,0.1),
+0 25px 40px rgba(0,0,0,0.18);
 }
 
-/* bấm lún */
+/* bấm lún xuống */
 .box:active{
-transform:translateY(3px) scale(0.98);
+transform:translateY(6px);
+box-shadow:
+0 2px 0 rgba(0,0,0,0.15),
+0 8px 15px rgba(0,0,0,0.1);
 }
 
 </style>
