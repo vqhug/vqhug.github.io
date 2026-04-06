@@ -15,7 +15,7 @@ flex-direction:column;
 align-items:center;
 min-height:100vh;
 
-/* nền tối đẹp */
+/* nền tối động */
 background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#1f2937);
 background-size:400% 400%;
 animation:gradient 15s ease infinite;
@@ -44,7 +44,7 @@ flex-direction:column;
 gap:25px;
 }
 
-/* ô 3D */
+/* nút 3D rõ khối */
 .box{
 padding:26px;
 text-align:center;
@@ -56,27 +56,28 @@ text-decoration:none;
 
 background:white;
 
-border:1px solid rgba(0,0,0,0.08);
-
+/* cạnh dưới tạo khối */
 box-shadow:
-0 8px 0 rgba(0,0,0,0.2),
-0 18px 35px rgba(0,0,0,0.35);
+0 10px 0 #d4d4d4,
+0 20px 40px rgba(0,0,0,0.45);
 
-transition:all 0.2s ease;
+transition:all 0.15s ease;
 }
 
+/* hover nâng lên */
 .box:hover{
 transform:translateY(-4px);
 box-shadow:
-0 12px 0 rgba(0,0,0,0.18),
-0 25px 45px rgba(0,0,0,0.45);
+0 14px 0 #d4d4d4,
+0 28px 50px rgba(0,0,0,0.55);
 }
 
+/* bấm lún xuống */
 .box:active{
-transform:translateY(6px);
+transform:translateY(8px);
 box-shadow:
-0 2px 0 rgba(0,0,0,0.25),
-0 8px 15px rgba(0,0,0,0.25);
+0 3px 0 #d4d4d4,
+0 10px 20px rgba(0,0,0,0.35);
 }
 
 </style>
