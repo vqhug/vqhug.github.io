@@ -15,10 +15,10 @@ flex-direction:column;
 align-items:center;
 min-height:100vh;
 
-/* nền động */
-background:linear-gradient(-45deg,#e3f2fd,#f5f7ff,#e0f7fa,#f3e5f5);
+/* nền tối đẹp */
+background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#1f2937);
 background-size:400% 400%;
-animation:gradient 12s ease infinite;
+animation:gradient 15s ease infinite;
 }
 
 @keyframes gradient{
@@ -30,7 +30,7 @@ animation:gradient 12s ease infinite;
 .title{
 font-size:32px;
 font-weight:bold;
-color:#333;
+color:white;
 margin-top:60px;
 text-align:center;
 }
@@ -44,7 +44,7 @@ flex-direction:column;
 gap:25px;
 }
 
-/* ô 3D rõ khối */
+/* ô 3D */
 .box{
 padding:26px;
 text-align:center;
@@ -56,31 +56,27 @@ text-decoration:none;
 
 background:white;
 
-/* viền nhẹ */
 border:1px solid rgba(0,0,0,0.08);
 
-/* bóng tạo chiều sâu */
 box-shadow:
-0 8px 0 rgba(0,0,0,0.12),
-0 18px 30px rgba(0,0,0,0.12);
+0 8px 0 rgba(0,0,0,0.2),
+0 18px 35px rgba(0,0,0,0.35);
 
 transition:all 0.2s ease;
 }
 
-/* hover nâng lên */
 .box:hover{
 transform:translateY(-4px);
 box-shadow:
-0 12px 0 rgba(0,0,0,0.1),
-0 25px 40px rgba(0,0,0,0.18);
+0 12px 0 rgba(0,0,0,0.18),
+0 25px 45px rgba(0,0,0,0.45);
 }
 
-/* bấm lún xuống */
 .box:active{
 transform:translateY(6px);
 box-shadow:
-0 2px 0 rgba(0,0,0,0.15),
-0 8px 15px rgba(0,0,0,0.1);
+0 2px 0 rgba(0,0,0,0.25),
+0 8px 15px rgba(0,0,0,0.25);
 }
 
 </style>
